@@ -1,0 +1,44 @@
+<todo>
+    <h3>My Todo App by riot.js</h3>
+
+    <form>
+        <input type="text" name="input" onkeyup={this.onkeyup}>
+        <button onclick={this.add}>Add</button>
+    </form>
+
+    <table>
+        <tr each={this.items}>
+            <td>
+                <input type="checkbox" checked={this.done} onclick={this.parent.update_is_done}>
+            </td>
+            <td class={completed:this.done}>
+                {this.title}
+            </td>
+        </tr>
+    </table>
+
+    <style scoped>
+        .completed {
+            text-decoration: line-through;
+        }
+    </style>
+
+    <script>
+        this.items = [];
+        this.text = '';
+        this.onkeyup = function(e) {
+            this.text = e.target.value;
+        };
+        this.add = function(e) {
+            if (this.text) {
+                this.items.push({ title: this.text });
+                this.text = this.input.value = '';
+            }
+        };
+        this.update_is_done = function(e) {
+            var item = e.item;
+            item.done = !item.done;
+            return true;
+        };
+    </script>
+</todo>

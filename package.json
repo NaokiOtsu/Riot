@@ -1,0 +1,23 @@
+{
+  "name": "Riot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NaokiOtsu/Riot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NaokiOtsu/Riot/issues"
+  },
+  "homepage": "https://github.com/NaokiOtsu/Riot#readme",
+  "devDependencies": {
+    "riot": "^2.6.1"
+  }
+}
